@@ -1,10 +1,22 @@
 #!/bin/bash
 
+# Clone the current IoTivity source from github...
 git clone https://github.com/iotivity/iotivity.git
 cd iotivity
 
+# We need to pull this independently for some reason...
 git clone https://github.com/01org/tinycbor.git extlibs/tinycbor/tinycbor
 
-scons RELEASE=TRUE 
-scons install
+# If you are targeting specific platforms, this would be the line to customize.
+# 
+# We prefix with /usr so that scons install places output in a place such that
+#   our build system doesn't need to care where we built IoTivity.
+scons RELEASE=TRUE --prefix=/usr
 
+# At this point, you could "scons c" and re-run the build to produce a separate,
+#   parallel SDK (for example, android).
+#scons c
+#scons RELEASE=FALSE TARGET_OS='android'
+
+# Install the resulting SDK.
+scons install
