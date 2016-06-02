@@ -13,9 +13,6 @@ git clone https://github.com/01org/tinycbor.git extlibs/tinycbor/tinycbor
 #   our build system doesn't need to care where we built IoTivity.
 scons RELEASE=TRUE --prefix=/usr
 
-# Install the resulting SDK.
-scons install
-
 # At this point, you could "scons c" and re-run the build to produce a separate,
 #   parallel SDK (for example, android).
 # See the IoTivity build scripts for permutations:
