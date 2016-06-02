@@ -20,13 +20,9 @@ scons RELEASE=TRUE --prefix=/usr
 #
 #scons c
 #scons RELEASE=TRUE TARGET_OS='android'
-#scons install
 
 #scons c
 #scons TARGET_ARCH='ARMv7'
-#scons install
 
 #scons c
 #scons TARGET_OS='arduino' TARGET_ARCH='avr'
-#scons install
-
