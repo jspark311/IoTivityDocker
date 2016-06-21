@@ -20,31 +20,29 @@ WHERE_I_AM   = $(shell pwd)
 export CXX   = $(shell which g++)
 export CC    = $(shell which gcc)
 
-export OUTPUT_PATH = $(WHERE_I_AM)/
-
 
 ###########################################################################
 # Source files, includes, and linker directives...
 ###########################################################################
-INCLUDES    = -I$(WHERE_I_AM)/. -I./resource/include/
-INCLUDES   += -I./resource/csdk/stack/include/
-INCLUDES   += -I./resource/csdk/security/include/
-INCLUDES   += -I./resource/csdk/routing/include/
-INCLUDES   += -I./resource/csdk/logger/include/
-INCLUDES   += -I./resource/c_common/
-INCLUDES   += -I./resource/c_common/ocrandom/include/
-INCLUDES   += -I./resource/c_common/oic_time/include/
-INCLUDES   += -I./resource/c_common/oic_string/include/
-INCLUDES   += -I./resource/c_common/oic_malloc/include/
-INCLUDES   += -I./resource/oc_logger/include/
-INCLUDES   += -I./resource/oic/include/
-INCLUDES   += -I./service/resource-encapsulation/include/
+INCLUDES    = -I$(WHERE_I_AM)/. -I./iotivity/resource/include/
+INCLUDES   += -I./iotivity/resource/csdk/stack/include/
+INCLUDES   += -I./iotivity/resource/csdk/security/include/
+INCLUDES   += -I./iotivity/resource/csdk/routing/include/
+INCLUDES   += -I./iotivity/resource/csdk/logger/include/
+INCLUDES   += -I./iotivity/resource/c_common/
+INCLUDES   += -I./iotivity/resource/c_common/ocrandom/include/
+INCLUDES   += -I./iotivity/resource/c_common/oic_time/include/
+INCLUDES   += -I./iotivity/resource/c_common/oic_string/include/
+INCLUDES   += -I./iotivity/resource/c_common/oic_malloc/include/
+INCLUDES   += -I./iotivity/resource/oc_logger/include/
+INCLUDES   += -I./iotivity/resource/oic/include/
+INCLUDES   += -I./iotivity/service/resource-encapsulation/include/
 
 
 # This is awful. Sick of fighting with IoTivities constant and unpredictable
 # build-system failure. Until they fix their SDK installation, we are forced
 #   to do this...
-IOTIVITY_LOCUS = $(WHERE_I_AM)/out/linux/x86_64/release/
+IOTIVITY_LOCUS = $(WHERE_I_AM)/iotivity/out/linux/x86_64/release/
 
 # Libraries to link
 LIBS  = -L$(IOTIVITY_LOCUS) -lstdc++ -lm -lpthread -ldl

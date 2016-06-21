@@ -8,4 +8,8 @@ How to use this Dockerfile.
     docker build -t='my_name' IoTivityDocker/
     docker run -iv <your root source path>:/src_root my_name
 
+Or if you are only interested in invoking Thermostat...
+
+    docker run -i my_name /root/runThermostat.sh
+
 The last command should drop you into a shell where you can execute your build.
