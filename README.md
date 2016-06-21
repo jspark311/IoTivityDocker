@@ -1,6 +1,6 @@
 # IoTivityDocker
-IoTivity build environment based on Ubuntu.
-
+Secure IoTivity build environment based on Ubuntu.
+Sample thermostat device included.
 
 How to use this Dockerfile.
 
