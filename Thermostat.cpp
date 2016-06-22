@@ -163,7 +163,7 @@ void runResourceControl(DisplayControlMenuFunc displayMenuFunc, const std::strin
 
 
 static FILE *client_open(const char * /*path*/, const char *mode) {
-    return fopen("./thermostat_db.json", mode);
+    return fopen("./thermostat_db.cbor", mode);
 }
 
 
