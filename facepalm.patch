@@ -1,0 +1,10 @@
+--- extlibs/tinycbor/SConscript	2016-07-19 10:47:58.916773261 -0700
++++ tempSConscript	2016-07-19 10:47:05.606774215 -0700
+@@ -37,6 +37,7 @@
+ 
+ cbor_src = [
+     os.path.join(cborDir,'src/cborparser.c'),
++    os.path.join(cborDir,'src/cborparser_dup_string.c'),
+     os.path.join(cborDir,'src/cborencoder.c'),
+     os.path.join(cborDir,'src/cborerrorstrings.c'),
+     ]
